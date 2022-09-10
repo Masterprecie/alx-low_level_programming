@@ -7,31 +7,31 @@
 
 int main(void)
 {
-	int ten;
-	int one;
-	int a;
-	int b;
+	int tens;
+	int ones;
+	int t;
+	int o;
 
-	for (ten = '0'; ten <= '9'; ten++)
+	for (tens = '0'; tens <= '9'; tens++)
 	{
-		for (one = '0'; one <= '9'; one++)
+		for (ones = '0'; ones <= '9'; ones++)
 		{
-			for (a = ten; a <= '9'; a++)
+			for (t = tens; t <= '9'; t++)
 			{
-				for (b = one + 1; b <= '9'; b++)
+				for (o = ones + 1; o <= '9'; o++)
 				{
-					putchar(ten);
-					putchar(one);
+					putchar(tens);
+					putchar(ones);
 					putchar(' ');
-					putchar(a);
-					putchar(b);
-					if (!((ten == '9' && one == '8') && (a == '9' && b == '9')))
+					putchar(t);
+					putchar(o);
+					if (!((tens == '9' && ones == '8') && (t == '9' && o == '9')))
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
-				b = '0';
+				o = '0';
 			}
 		}
 	}
