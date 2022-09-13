@@ -37,8 +37,7 @@ int main(void)
 		if (count != 98)
 			printf(", ");
 		fib1_half1 = fib2_half1;
-		fib1_half2 = fib2_half2;
-		fib2_half1 = half;
+		fib1_half2 = fib2_half2;												fib2_half1 = half1;
 		fib2_half2 = half2;
 	}
 	printf("\n");
