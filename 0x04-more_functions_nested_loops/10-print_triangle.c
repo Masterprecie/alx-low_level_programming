@@ -6,16 +6,20 @@
 */
 void print_triangle(int size)
 {
-	int row, column, k;
+	int hash, index;
 
-	if (size <= 0)
-		_putchar('\n');
-	for (row = 0; row < size; row++)
+	if (size > 0)
 	{
-		for (column = size - row; column > 1; column--)
+	for (row = 1; hash <= size; hash++)
+	{
+		for (index = size - hash; index > 0; index--)
 			_putchar(' ');
-		for (k = row + column; k >= 1; k--)
+		for (index = 0; index < hash; index++)
 			_putchar('#');
-			_putchar('\n');
+		if (hash == size)
+			continue;
+		_putchar('\n');
 	}
+	}
+	_putchar('\n');
 }
