@@ -1,9 +1,12 @@
 #include <stdio.h>
 
+#include <stdio.h>
+
 /**
-* main - entry block
-* @void: no argument
-* Return: 0 Success
+* main - Prints the numbers from 1-100, but for multiples of three,
+*       Fizz is printed instead of the number, for multiples of five,
+*        Buzz, and for multiples of both three and five, FizzBuzz.
+* Return: Always 0.
 */
 int main(void)
 {
@@ -28,7 +31,7 @@ int main(void)
 			printf("%d", i);
 		}
 		if (i == 100)
-			continue
+			continue;
 		printf(" ");
 	}
 	printf("\n");
