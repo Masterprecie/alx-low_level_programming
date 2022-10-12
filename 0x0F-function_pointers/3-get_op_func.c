@@ -2,22 +2,26 @@
 #include <stdlib.h>
 
 /**
- * get_op_func - returns pointer to appropriate calculation function
+ * get_op_func - Selects the correct function to perform
+ *               the operation asked by the user.
+ * @s: The operator passed as argument.
  *
- * @s: string containing operation symbol
- *
- * Return: pointer to function if successful, or NULL if fails
+ * Return: A pointer to the function corresponding
+ *         to the operator given as a parameter.
  */
 int (*get_op_func(char *s))(int, int)
 {
-	op_t key[] = {{"+", op_add}, {"-", op_sub}, {"*", op_mul}, {"/", op_div}, {"%", op_mod}};
+	op_t ops[] = {
+		 {"+", op_add},
+		 {"-", op_sub},
+		 {"*", op_mul},
+		 {"/", op_div},
+		 {"%", op_mod},
+		 {NULL, NULL}};
 	int i = 0;
 
-	while (i < 5)
-	{
-		if (*key[i].op == *s)
-			return (key[i].f);
+	while (ops[i].op != NULL && *(ops[i].op) != *s)
 		i++;
-	}
-	return (NULL);
+
+	return (ops[i].f);
 }
