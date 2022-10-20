@@ -10,7 +10,7 @@
  */
 int (*get_op_func(char *s))(int, int)
 {
-	op_t key[] = {{"+", op_add}, {"-", op_sub}, {"*", op_mul}, {"/", op_div}, {"%", op_mod}};
+	op_t key[]={{"+",op_add},{"-",op_sub},{"*",op_mul},{"/",op_div},{"%",op_mod}};
 	int i = 0;
 
 	while (i < 5)
