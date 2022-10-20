@@ -2,33 +2,45 @@
 #include <stdlib.h>
 
 /**
- * main - print hex opcodes of main up to n bytes passed in as an argument
+ * main - Prints the opcodes of itself.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
  *
- * @ac: number of arguments
- * @av: array of argument strings
- *
- * Return: 0 on success
+ * Return: Always 0.
  */
-int main(int ac, char *av[])
+int main(int argc, char *argv[])
 {
-	unsigned char *f = (unsigned char *)(long int)main;
-	int n, i;
+	int bytes, index;
+	int (*address)(int, char **) = main;
+	unsigned char opcode;
 
-	if (ac != 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
-		return (1);
+		exit(1);
 	}
-	n = atoi(av[1]);
-	if (n < 0)
+
+	bytes = atoi(argv[1]);
+
+	if (bytes < 0)
 	{
 		printf("Error\n");
-		return (2);
+		exit(2);
 	}
-	if (n > 0)
-		printf("%x", *f++);
-	for (i = 1; i < n; i++)
-		printf(" %x", *f++);
+
+	for (index = 0; index < bytes; index++)
+	{
+		opcode = *(unsigned char *)address;
+		printf("%.2x", opcode);
+
+		if (index == bytes - 1)
+			continue;
+		printf(" ");
+
+		address++;
+	}
+
 	printf("\n");
+
 	return (0);
 }
