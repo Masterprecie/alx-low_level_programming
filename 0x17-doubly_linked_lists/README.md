@@ -1,4 +1,4 @@
-# Header
+# Title
 C - Doubly linked lists
 In this project, I learned about using doubly-linked lists in C.
 
@@ -20,7 +20,8 @@ typedef dlistint_t	struct dlistint_s
 6-sum_dlistint.c	int sum_dlistint(dlistint_t *head);
 7-insert_dnodeint.c	dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 8-delete_dnodeint.c	int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
-Tasks 📃
+
+## Tasks 📃
 0. Print list
 
 0-print_dlistint.c: C function that prints all the elements of a doubly-linked dlistint_t list.
