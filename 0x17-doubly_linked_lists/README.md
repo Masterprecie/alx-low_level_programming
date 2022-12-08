@@ -1,6 +1,9 @@
+# Header
 C - Doubly linked lists
 In this project, I learned about using doubly-linked lists in C.
 
+
+## Description
 lists.h: Header file containing definitions and prototypes for all types and functions written for the project.
 Type/File	Definition/Prototype
 struct dlistint_s	
